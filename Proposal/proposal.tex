@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{PrivacyLx $\bullet$ Junho 2020 $\bullet$ Preposta de Projeto} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Measuring Student Privacy} % Article title
+\author{%
+\textsc{Kevin Gallagher}%\thanks{A thank you or further information} \\[1ex] % Your name
+\normalsize PrivacyLx \\ % Your institution
+\normalsize \href{mailto:contact@privacylx.org}{contact@privacylx.org} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent Education is a fundamental human right, and is necessary for an individual to interact with society in a meaningful and productive way. Education, however, should not come at the expense of other human rights, such as privacy. In this project we propose to determine to what degree the education system of Portugal forces students to give up their right to privacy by sending student data to third parties, or forcing students to interact with third parties. We propose to do this by surveying multiple sources: school decision makers, school compliance officers, school IT technicians, and parents of students in the Portuguese school system. This data will then be analyzed to determine how many third parties are receiving this information, and the amount of information they are receiving from or about students.
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Education is a fundamental human right, and is necessary for an individual to interact with society in a meaningful and productive way. Through education students can learn fundamental skills such as math, science, and critical thinking. They can learn facts necessary to navigate bureaucracies and complex systems. They can learn skills necessary to become employed, or to start businesses of their own. They learn the importance of their interactions within the political and economic systems. Education is clearly important to the development of children as they learn to become members of society.
+
+However, education must not come at the expense of other human rights, such as privacy. Modern education techniques use modern technology to great effect, such as allowing rapid communication between teacher and student outside of the classroom, allowing for quick file sharing between students, or allowing for innovative and interesting ways for students to interact with learning material. Unfortunately, many of the companies that offer these methods of learning operate as for profit businesses with business models that rely on retention and sale of user data. When schools adopt these technologies for the most benign reasons, they share their student's data with these companies who can then use it for advertising purposes. Even if they do not send their students' data to these companies, if they force their students to interact with tools or services that these companies offer, these companies can use JavaScript, plugins, or other technologies to collect information about student identities, behaviors, and interests. 
+
+This violation of privacy does not mean that learning and teaching must be done with antiquated techniques. Many privacy-preserving methods are available to schools or to the education system as a whole, such as self-hosting teleconferencing services, self-hosting Learning Management Systems, and using their own private file storage infrastructure. Though this is all possible, many schools and education systems choose not to do this because of financial limitations, rather than considering the rights of their students.
+
+\section{Proposal}
+\label{sec:proposal}
+
+We propose to study the extent to which Portuguese schools violate their students' privacy by exposing their student's data to third party companies, or requiring their students to interact with third-party services.\footnote{Though many schools may data restriction agreements with these third party services, we do not consider this a valid argument for stating that privacy is preserved. Some students may not want data to be transmitted to third parties at all, making transmission a violation of privacy. More, we consider such agreements to avoid selling and sharing to be unenforceable, and therefore not worth consideration.} Specifically, for each school in Portugal we intend to answer the following questions:
+
+\begin{enumerate}
+\itemsep0em
+\item Does the school transmit information about students to third parties?
+\item Which third parties are receiving student data?
+\item What methods are taken to protect transmitted data?
+\item Why is the data transmitted to the third parties?
+\item Does the school require students to use third party services?
+\item Which third parties are students forced to interact with?
+\item Do these services contain tracking code that send data to even more third parties?
+\item Why does the school require students to use these third party services?
+\end{enumerate}
+
+Collecting this information will allow us to better understand the extent of the violation of students' privacy in Portugal, which can help us improve the current state of affairs (see Section \ref{sec:deliverables}).
+
+%------------------------------------------------
+
+\section{Methods}
+
+We propose to answer the questions mentioned in Section \ref{sec:proposal} through the administration of 4 different surveys to each school, when possible. Each survey will be sent to different stakeholders in the school, and will contain different questions based on the station of the individual. For example, a question about tracking code from a third party provider is best posed to the IT professional at a school, not to the president of the school. We will create surveys for the following stake holders of a school:
+
+\begin{itemize}
+\itemsep0em
+\item Decision maker (principal, president, or dean)
+\item IT Professional (when possible)
+\item Compliance or Privacy Officer (when possible)
+\item Parent of student, or leader of parent's association (when possible)
+\end{itemize}
+
+For ease of analysis these surveys will mostly include selection questions, and some free form questions. Free form questions will be analyzed by the available staff to discover what additional privacy dangers might exist for students, and to discover the motivations behind decisions that endanger student privacy.
+
+
+%------------------------------------------------
+
+\section{Deliverables}
+\label{sec:deliverables}
+
+After collecting and analyzing this data, we intend on publishing the aggregate statistics of our findings, as well as a summary report of our findings. We also intend on including in our report potential solutions on how schools or the ministries of education can move towards protecting the privacy rights of students in Portugal.
+
+\section{Conclusion}
+
+Education in Portugal should not come at the expense of the right to privacy. In this proposal we put forth a series of questions we intend on answering, and discussed collecting this information through the use of four separate surveys. From these surveys we will produce aggregated statistics, a report summary of our findings, and a list of recommendations for schools and the ministry of education to help better protect students' privacy rights.
+%------------------------------------------------
+%\section{Results}
+%------------------------------------------------
+
+%\section{Discussion}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
