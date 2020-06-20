@@ -53,7 +53,7 @@
 \pagestyle{fancy} % All pages have headers and footers
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
-\fancyhead[C]{PrivacyLx $\bullet$ Junho 2020 $\bullet$ Preposta de Projeto} % Custom header text
+\fancyhead[C]{PrivacyLx $\bullet$ Junho 2020 $\bullet$ Proposta de Projeto} % Custom header text
 \fancyfoot[RO,LE]{\thepage} % Custom footer text
 
 \usepackage{titling} % Customizing the title section
@@ -81,7 +81,7 @@
 \date{\today} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
-\noindent Education is a fundamental human right, and is necessary for an individual to interact with society in a meaningful and productive way. Education, however, should not come at the expense of other human rights, such as privacy. In this project we propose to determine to what degree the education system of Portugal forces students to give up their right to privacy by sending student data to third parties, or forcing students to interact with third parties. We propose to do this by surveying multiple sources: school decision makers, school compliance officers, school IT technicians, and parents of students in the Portuguese school system. This data will then be analyzed to determine how many third parties are receiving this information, and the amount of information they are receiving from or about students.
+\noindent A educação é um direito humano fundamental e é necessária para que um indivíduo possa interagir com a sociedade de forma significativa e produtiva. A educação, porém, não deve ser feita à custa de outros direitos humanos, como a privacidade. Neste projecto propomos determinar até que ponto o sistema educativo português obriga os alunos a renunciar ao seu direito à privacidade, enviando dados dos alunos a plataformas de terceiros, ou forçando os alunos a com elas interagir. Propomo-nos a fazê-lo através do levantamento de múltiplas fontes: direções escolares, responsáveis de proteção de dados das escolas, técnicos informáticos escolares e pais de alunos do sistema escolar português. Estes dados serão então analisados para determinar quantas plataformas de terceiros estão a receber esta informação, e a quantidade de informação que estão a receber dos ou sobre os alunos.
 \end{abstract}
 }
 
@@ -96,60 +96,68 @@
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
-\section{Introduction}
+\section{Introdução}
 
-Education is a fundamental human right, and is necessary for an individual to interact with society in a meaningful and productive way. Through education students can learn fundamental skills such as math, science, and critical thinking. They can learn facts necessary to navigate bureaucracies and complex systems. They can learn skills necessary to become employed, or to start businesses of their own. They learn the importance of their interactions within the political and economic systems. Education is clearly important to the development of children as they learn to become members of society.
 
-However, education must not come at the expense of other human rights, such as privacy. Modern education techniques use modern technology to great effect, such as allowing rapid communication between teacher and student outside of the classroom, allowing for quick file sharing between students, or allowing for innovative and interesting ways for students to interact with learning material. Unfortunately, many of the companies that offer these methods of learning operate as for profit businesses with business models that rely on retention and sale of user data. When schools adopt these technologies for the most benign reasons, they share their student's data with these companies who can then use it for advertising purposes. Even if they do not send their students' data to these companies, if they force their students to interact with tools or services that these companies offer, these companies can use JavaScript, plugins, or other technologies to collect information about student identities, behaviors, and interests. 
+A educação é um direito humano fundamental e é necessária para que um indivíduo possa interagir com a sociedade de forma significativa e produtiva. Através da educação, os estudantes podem aprender competências fundamentais como a matemática, a ciência e o pensamento crítico. Podem aprender factos necessários para navegar em burocracia e sistemas complexos. Podem aprender as competências necessárias para o mundo de trabalho, ou para criarem a sua própria empresa. Bem como aprender a importância da sua participação no âmbito dos sistemas políticos e económicos. A educação é claramente importante para o desenvolvimento das crianças à medida que estas aprendem a tornar-se membros da sociedade.
 
-This violation of privacy does not mean that learning and teaching must be done with antiquated techniques. Many privacy-preserving methods are available to schools or to the education system as a whole, such as self-hosting teleconferencing services, self-hosting Learning Management Systems, and using their own private file storage infrastructure. Though this is all possible, many schools and education systems choose not to do this because of financial limitations, rather than considering the rights of their students.
 
-\section{Proposal}
+No entanto, a educação não deve ser feita à custa de outros direitos humanos, como a privacidade. As técnicas educativas modernas utilizam a tecnologia moderna com grande eficácia, como por exemplo permitindo uma comunicação rápida entre professor e aluno fora da sala de aula, facilitando uma partilha rápida de ficheiros entre alunos, ou permitindo formas inovadoras e interessantes de interacção dos alunos com o material de aprendizagem. Infelizmente, muitas das empresas que oferecem estes métodos de aprendizagem operam como empresas com modelos de negócio que dependem da retenção e venda de dados dos utilizadores. Quando as escolas adoptam estas tecnologias pelas razões mais benignas, partilham os dados dos seus alunos com estas empresas, que podem então utilizá-los para fins publicitários. Mesmo que não enviem os dados dos seus alunos a estas empresas, se obrigarem os seus alunos a interagir com ferramentas ou serviços que estas empresas oferecem, estas empresas podem utilizar JavaScript, plugins ou outras tecnologias para recolher informação sobre as identidades, comportamentos e interesses dos alunos. 
+
+
+Preservar a privacidade dos alunos não implica, contudo, que a aprendizagem e o ensino devam ser feitos com técnicas antiquadas. Há uma multiplicidade de maneiras como as escolas e o sistema educativo no seu conjunto pode proteger a privacidade dos alunos, destacando-se particulamente a hospedagem pela prórpia escola ou agrupamento de software de teleconferência, os sistemas de gestão da aprendizagem e a utilização da sua própria infra-estrutura privada para armazenamento de ficheiros. Embora tudo isto seja possível, muitas escolas e sistemas educativos optam por não o fazer devido a limitações financeiras, em vez de considerarem os direitos dos seus alunos.
+
+
+\section{Proposta}
 \label{sec:proposal}
 
-We propose to study the extent to which Portuguese schools violate their students' privacy by exposing their student's data to third party companies, or requiring their students to interact with third-party services.\footnote{Though many schools may data restriction agreements with these third party services, we do not consider this a valid argument for stating that privacy is preserved. Some students may not want data to be transmitted to third parties at all, making transmission a violation of privacy. More, we consider such agreements to avoid selling and sharing to be unenforceable, and therefore not worth consideration.} Specifically, for each school in Portugal we intend to answer the following questions:
+Propomo-nos analisar até que ponto as escolas portuguesas violam a privacidade dos seus alunos ao exporem os seus dados a empresas terceiras, ou ao exigirem que os seus alunos interajam com serviços de terceiros. \footnote{Embora muitas escolas possam ter acordos de restrição de dados com estes serviços de terceiros, não consideramos que este seja um argumento válido para afirmar que a privacidade é preservada. Alguns alunos podem não querer que os dados sejam transmitidos a terceiros, tornando a transmissão uma violação da privacidade. Adicionalmente, consideramos que tais acordos para evitar a venda e partilha são impossíveis de fornecer garantias e, portanto, não merecem ser considerados.} Especificamente, para cada escola em Portugal, pretendemos responder às seguintes questões:
+
 
 \begin{enumerate}
 \itemsep0em
-\item Does the school transmit information about students to third parties?
-\item Which third parties are receiving student data?
-\item What methods are taken to protect transmitted data?
-\item Why is the data transmitted to the third parties?
-\item Does the school require students to use third party services?
-\item Which third parties are students forced to interact with?
-\item Do these services contain tracking code that send data to even more third parties?
-\item Why does the school require students to use these third party services?
+\item A escola transmite informações sobre os alunos a terceiros?
+\item Quais os terceiros que estão a receber dados dos alunos?
+\item Quais são os métodos utilizados para proteger os dados transmitidos?
+\item Porque é que os dados são transmitidos a terceiros?
+\item A escola exige que os alunos utilizem serviços de terceiros?
+\item Quais são os terceiros com quem os alunos são obrigados a interagir?
+\item Estes serviços contêm trackers que enviam dados a ainda mais terceiros?
+\item Porque é que a escola exige que os alunos utilizem estes serviços de terceiros?
+
 \end{enumerate}
 
-Collecting this information will allow us to better understand the extent of the violation of students' privacy in Portugal, which can help us improve the current state of affairs (see Section \ref{sec:deliverables}).
+A recolha desta informação permitir-nos-á compreender melhor a extensão da violação da privacidade dos alunos em Portugal, o que nos pode ajudar a melhorar o estado actual das coisas (ver secção \ref{sec:deliverables}).
 
 %------------------------------------------------
 
-\section{Methods}
+\section{Métodos}
 
-We propose to answer the questions mentioned in Section \ref{sec:proposal} through the administration of 4 different surveys to each school, when possible. Each survey will be sent to different stakeholders in the school, and will contain different questions based on the station of the individual. For example, a question about tracking code from a third party provider is best posed to the IT professional at a school, not to the president of the school. We will create surveys for the following stake holders of a school:
+Propomos responder às questões mencionadas na secção \ref{sec:proposal} através da quatro inquéritos diferentes para cada escola, sempre que possível. Cada inquérito será enviado a pessoas diferentes papeis no funcionamento da escola. Por exemplo, uma pergunta sobre se há trackers em serviços de terceiros é melhor colocada ao profissional de TI de uma escola, e não ao presidente. Iremos criar inquéritos para os seguintes intervenientes de uma escola:
 
 \begin{itemize}
 \itemsep0em
-\item Decision maker (principal, president, or dean)
-\item IT Professional (when possible)
-\item Compliance or Privacy Officer (when possible)
-\item Parent of student, or leader of parent's association (when possible)
+\item Direção
+\item Profissionais de TI (quando possível)
+\item Responsável pela privacidade (quando possível)
+\item Pais de alunos, ou presidente de associação de pais (quando possível)
 \end{itemize}
 
-For ease of analysis these surveys will mostly include selection questions, and some free form questions. Free form questions will be analyzed by the available staff to discover what additional privacy dangers might exist for students, and to discover the motivations behind decisions that endanger student privacy.
 
+Para facilitar a análise, estes inquéritos incluirão principalmente perguntas de escolha múltipla e algumas perguntas abertas. As perguntas abertas serão analisadas pelo pessoal disponível para descobrir que perigos adicionais à privacidade podem existir para os alunos e para descobrir as motivações por detrás das decisões que põem em risco a privacidade dos alunos.
 
 %------------------------------------------------
 
-\section{Deliverables}
+\section{Documentos a produzir}
 \label{sec:deliverables}
 
-After collecting and analyzing this data, we intend on publishing the aggregate statistics of our findings, as well as a summary report of our findings. We also intend on including in our report potential solutions on how schools or the ministries of education can move towards protecting the privacy rights of students in Portugal.
+Após a recolha e análise destes dados, pretendemos publicar as estatísticas agregadas das nossas conclusões, bem como um relatório de sumário dos resultados obtidos. Pretendemos também incluir no nosso relatório potenciais soluções sobre como as escolas ou o Ministério da Educação podem avançar no sentido de proteger os direitos de privacidade dos alunos em Portugal.
 
-\section{Conclusion}
 
-Education in Portugal should not come at the expense of the right to privacy. In this proposal we put forth a series of questions we intend on answering, and discussed collecting this information through the use of four separate surveys. From these surveys we will produce aggregated statistics, a report summary of our findings, and a list of recommendations for schools and the ministry of education to help better protect students' privacy rights.
+\section{Conclusões}
+
+A educação em Portugal não deve ser feita à custa do direito à privacidade. Nesta proposta apresentamos uma série de perguntas que pretendemos responder e discutimos a recolha desta informação através de quatro inquéritos separados. A partir destes inquéritos iremos produzir estatísticas agregadas, um relatório de síntese das nossas conclusões e uma lista de recomendações às escolas e ao Ministério da Educação para ajudar a proteger melhor os direitos dos alunos à privacidade.
+
 %------------------------------------------------
 %\section{Results}
 %------------------------------------------------
